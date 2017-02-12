@@ -19,6 +19,7 @@
 		659057711E4FF14F00448308 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659057701E4FF14F00448308 /* Alamofire.framework */; };
 		659057741E4FF5F700448308 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057731E4FF5F700448308 /* WeatherService.swift */; };
 		659057761E50228000448308 /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057751E50228000448308 /* WeatherCondition.swift */; };
+		659057781E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659057771E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		659057701E4FF14F00448308 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		659057731E4FF5F700448308 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		659057751E50228000448308 /* WeatherCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
+		659057771E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659057781E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework in Frameworks */,
 				659057711E4FF14F00448308 /* Alamofire.framework in Frameworks */,
 				6590576F1E4FF14300448308 /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -144,6 +147,7 @@
 		6590576D1E4FF14300448308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				659057771E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework */,
 				659057701E4FF14F00448308 /* Alamofire.framework */,
 				6590576E1E4FF14300448308 /* SwiftyJSON.framework */,
 			);
@@ -293,6 +297,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework",
 			);
 			outputPaths = (
 			);
