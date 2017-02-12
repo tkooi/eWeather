@@ -14,6 +14,9 @@
 		659057481E4FE2CE00448308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659057461E4FE2CE00448308 /* LaunchScreen.storyboard */; };
 		659057531E4FE2CE00448308 /* eweatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057521E4FE2CE00448308 /* eweatherTests.swift */; };
 		6590575E1E4FE2CE00448308 /* eweatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6590575D1E4FE2CE00448308 /* eweatherUITests.swift */; };
+		6590576C1E4FE8D500448308 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 6590576B1E4FE8D500448308 /* Cartfile */; };
+		6590576F1E4FF14300448308 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6590576E1E4FF14300448308 /* SwiftyJSON.framework */; };
+		659057711E4FF14F00448308 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659057701E4FF14F00448308 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		659057591E4FE2CE00448308 /* eweatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eweatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6590575D1E4FE2CE00448308 /* eweatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eweatherUITests.swift; sourceTree = "<group>"; };
 		6590575F1E4FE2CE00448308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6590576B1E4FE8D500448308 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
+		6590576E1E4FF14300448308 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		659057701E4FF14F00448308 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659057711E4FF14F00448308 /* Alamofire.framework in Frameworks */,
+				6590576F1E4FF14300448308 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,7 @@
 				659057511E4FE2CE00448308 /* eweatherTests */,
 				6590575C1E4FE2CE00448308 /* eweatherUITests */,
 				6590573B1E4FE2CE00448308 /* Products */,
+				6590576D1E4FF14300448308 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +112,7 @@
 				659057441E4FE2CE00448308 /* Assets.xcassets */,
 				659057461E4FE2CE00448308 /* LaunchScreen.storyboard */,
 				659057491E4FE2CE00448308 /* Info.plist */,
+				6590576B1E4FE8D500448308 /* Cartfile */,
 			);
 			path = eweather;
 			sourceTree = "<group>";
@@ -125,6 +135,15 @@
 			path = eweatherUITests;
 			sourceTree = "<group>";
 		};
+		6590576D1E4FF14300448308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				659057701E4FF14F00448308 /* Alamofire.framework */,
+				6590576E1E4FF14300448308 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +154,7 @@
 				659057361E4FE2CE00448308 /* Sources */,
 				659057371E4FE2CE00448308 /* Frameworks */,
 				659057381E4FE2CE00448308 /* Resources */,
+				659057721E4FF18E00448308 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -237,6 +257,7 @@
 			files = (
 				659057481E4FE2CE00448308 /* LaunchScreen.storyboard in Resources */,
 				659057451E4FE2CE00448308 /* Assets.xcassets in Resources */,
+				6590576C1E4FE8D500448308 /* Cartfile in Resources */,
 				659057431E4FE2CE00448308 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +277,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		659057721E4FF18E00448308 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		659057361E4FE2CE00448308 /* Sources */ = {
@@ -414,6 +453,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7YD9YNWB4R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = eweather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thomaskooi.eweather;
@@ -427,6 +470,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7YD9YNWB4R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = eweather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thomaskooi.eweather;
@@ -512,6 +559,7 @@
 				659057641E4FE2CE00448308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		659057651E4FE2CE00448308 /* Build configuration list for PBXNativeTarget "eweatherTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +568,7 @@
 				659057671E4FE2CE00448308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		659057681E4FE2CE00448308 /* Build configuration list for PBXNativeTarget "eweatherUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +577,7 @@
 				6590576A1E4FE2CE00448308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
