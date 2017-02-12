@@ -17,6 +17,8 @@
 		6590576C1E4FE8D500448308 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 6590576B1E4FE8D500448308 /* Cartfile */; };
 		6590576F1E4FF14300448308 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6590576E1E4FF14300448308 /* SwiftyJSON.framework */; };
 		659057711E4FF14F00448308 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659057701E4FF14F00448308 /* Alamofire.framework */; };
+		659057741E4FF5F700448308 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057731E4FF5F700448308 /* WeatherService.swift */; };
+		659057761E50228000448308 /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057751E50228000448308 /* WeatherCondition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		6590576B1E4FE8D500448308 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		6590576E1E4FF14300448308 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		659057701E4FF14F00448308 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		659057731E4FF5F700448308 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		659057751E50228000448308 /* WeatherCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 				659057461E4FE2CE00448308 /* LaunchScreen.storyboard */,
 				659057491E4FE2CE00448308 /* Info.plist */,
 				6590576B1E4FE8D500448308 /* Cartfile */,
+				659057731E4FF5F700448308 /* WeatherService.swift */,
+				659057751E50228000448308 /* WeatherCondition.swift */,
 			);
 			path = eweather;
 			sourceTree = "<group>";
@@ -302,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				659057401E4FE2CE00448308 /* ViewController.swift in Sources */,
+				659057761E50228000448308 /* WeatherCondition.swift in Sources */,
+				659057741E4FF5F700448308 /* WeatherService.swift in Sources */,
 				6590573E1E4FE2CE00448308 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
