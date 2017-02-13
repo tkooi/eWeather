@@ -8,8 +8,9 @@
 
 import Foundation
 
+// TODO: Rename to Weather and rename description to conditions
 struct WeatherCondition {
     let city: String
-    let temperature: Double
+    let temperature: Temperature
     let description: String
 }
