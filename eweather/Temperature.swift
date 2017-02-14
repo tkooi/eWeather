@@ -7,12 +7,13 @@
 //
 
 import Foundation
-
-enum TemperatureUnit {
-    case kelvin, celcius, fahrenheit
-}
+import UIKit
 
 struct Temperature: Equatable {
+    enum TemperatureUnit {
+        case kelvin, celcius, fahrenheit
+    }
+    
     let value: Double
     let unit: TemperatureUnit
     
@@ -45,5 +46,35 @@ struct Temperature: Equatable {
     
     static func ==(lhs: Temperature, rhs: Temperature) -> Bool {
         return lhs.value == rhs.value && lhs.unit == rhs.unit
+    }
+}
+
+extension Temperature {
+    func color() -> UIColor {
+        let fahrenheitTemperature = self.fahrenheit()
+        
+        switch Int(fahrenheitTemperature.value) {
+        case Int.min..<32: return UIColor.Temperatures.cold
+        case 32..<70: return UIColor.Temperatures.cool
+        case 70..<100: return UIColor.Temperatures.warm
+        default: return UIColor.Temperatures.hot
+        }
+    }
+}
+
+extension UIColor {
+    struct Temperatures {
+        static var cold: UIColor { return UIColor(red: 167, green: 219, blue: 216) }
+        static var cool: UIColor { return UIColor(red: 105, green: 210, blue: 231) }
+        static var warm: UIColor { return UIColor(red: 243, green: 134, blue: 48) }
+        static var hot: UIColor { return UIColor(red: 250, green: 105, blue: 0) }
+    }
+    
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
     }
 }
