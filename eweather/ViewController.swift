@@ -121,8 +121,6 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
             self.conditionsLabel.text = "not found, please try again"
             searchTextField.becomeFirstResponder()
         }
-        
-        
     }
     
     // MARK: - Actions
@@ -165,8 +163,6 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        
         if let query = searchTextField.text, !query.isEmpty
         {
             if let zipCode = Int(query) {
@@ -174,8 +170,6 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
             } else {
                 WeatherService.searchByQuery(query, completion: updateWeatherOrError)
             }
-            
-            
         }
         
         searchTextField.resignFirstResponder()

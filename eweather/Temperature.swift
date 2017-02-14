@@ -55,8 +55,9 @@ extension Temperature {
         
         switch Int(fahrenheitTemperature.value) {
         case Int.min..<32: return UIColor.Temperatures.cold
-        case 32..<70: return UIColor.Temperatures.cool
-        case 70..<100: return UIColor.Temperatures.warm
+        case 32..<50: return UIColor.Temperatures.chilly
+        case 50..<70: return UIColor.Temperatures.cool
+        case 70..<90: return UIColor.Temperatures.warm
         default: return UIColor.Temperatures.hot
         }
     }
@@ -64,7 +65,8 @@ extension Temperature {
 
 extension UIColor {
     struct Temperatures {
-        static var cold: UIColor { return UIColor(red: 167, green: 219, blue: 216) }
+        static var cold: UIColor { return UIColor(red: 224, green: 228, blue: 204) }
+        static var chilly: UIColor { return UIColor(red: 167, green: 219, blue: 216) }
         static var cool: UIColor { return UIColor(red: 105, green: 210, blue: 231) }
         static var warm: UIColor { return UIColor(red: 243, green: 134, blue: 48) }
         static var hot: UIColor { return UIColor(red: 250, green: 105, blue: 0) }
