@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
                 searchTextField.text = city
                 
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.backgroundView.backgroundColor = temperature.color()
+                    self.backgroundView.backgroundColor = temperature.color
                 }, completion: nil)
                 
                 UIView.transition(with: self.temparatureLabel,

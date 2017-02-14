@@ -20,6 +20,7 @@
 		659057741E4FF5F700448308 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057731E4FF5F700448308 /* WeatherService.swift */; };
 		659057761E50228000448308 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057751E50228000448308 /* Weather.swift */; };
 		659057781E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659057771E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework */; };
+		65E373DA1E52DFB7001AE783 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E373D91E52DFB7001AE783 /* Colors.swift */; };
 		65F1F4401E5193DE00FD0844 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1F43F1E5193DE00FD0844 /* Temperature.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		659057731E4FF5F700448308 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		659057751E50228000448308 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		659057771E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
+		65E373D91E52DFB7001AE783 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		65F1F43F1E5193DE00FD0844 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 				659057731E4FF5F700448308 /* WeatherService.swift */,
 				659057751E50228000448308 /* Weather.swift */,
 				65F1F43F1E5193DE00FD0844 /* Temperature.swift */,
+				65E373D91E52DFB7001AE783 /* Colors.swift */,
 			);
 			path = eweather;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				659057401E4FE2CE00448308 /* ViewController.swift in Sources */,
+				65E373DA1E52DFB7001AE783 /* Colors.swift in Sources */,
 				659057761E50228000448308 /* Weather.swift in Sources */,
 				659057741E4FF5F700448308 /* WeatherService.swift in Sources */,
 				65F1F4401E5193DE00FD0844 /* Temperature.swift in Sources */,

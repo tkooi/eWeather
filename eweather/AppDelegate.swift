@@ -10,13 +10,16 @@ import UIKit
 
 import AlamofireNetworkActivityIndicator
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    
     // MARK: Internal
     
     var window: UIWindow?
 
+    
     // MARK: UIApplicationDelegate
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
