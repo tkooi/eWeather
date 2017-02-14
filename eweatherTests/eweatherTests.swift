@@ -29,12 +29,12 @@ class eweatherTests: XCTestCase {
         // Initialize the view
         let _ = vc.view
         
-        vc.weatherCondition = WeatherCondition(city: "London", temperature: Temperature(45.2), description: "light rain")
+        vc.weather = Weather(city: "London", temperature: Temperature(45.2, unit: .fahrenheit), conditions: "light rain")
         
         // TODO: Add descriptions for failed tests
-        XCTAssertEqual(vc.cityName.text, "London")
-        XCTAssertEqual(vc.temparature.text, "45.2")
-        XCTAssertEqual(vc.weatherDescription.text, "light rain")
+        XCTAssertEqual(vc.searchTextField.text, "London")
+        XCTAssertEqual(vc.temparatureLabel.text, "45°")
+        XCTAssertEqual(vc.conditionsLabel.text, "light rain")
     }
     
     func testFormatTemperature() {

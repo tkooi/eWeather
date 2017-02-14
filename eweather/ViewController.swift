@@ -6,17 +6,22 @@
 //  Copyright © 2017 Thomas Kooi. All rights reserved.
 //
 
+import CoreLocation
 import UIKit
+
 import Alamofire
 import SwiftyJSON
-import CoreLocation
+
 
 class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
+
+
+    // MARK: Internal
+
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var temparatureLabel: UILabel!
     @IBOutlet weak var conditionsLabel: UILabel!
     @IBOutlet var backgroundView: UIView!
-    
 
     @IBOutlet weak var currentLocationButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
@@ -58,6 +63,8 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
             }
         }
     }
+    
+    // MARK: UIViewController
     
     // TODO: Only show location button when we have location services available
     override func viewDidLoad() {
@@ -105,11 +112,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
             }, completion: nil)
         }
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+
     func updateWeatherOrError(_ result: Result<Weather>)
     {
         switch result {
