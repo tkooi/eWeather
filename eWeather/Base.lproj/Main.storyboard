@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eweather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eWeather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -105,7 +105,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="i67-68-wpo"/>
                         <outlet property="clearButton" destination="mjN-da-3vH" id="kjh-8z-C08"/>
                         <outlet property="conditionsLabel" destination="UbZ-U1-GRY" id="Gko-fF-BoM"/>
                         <outlet property="currentLocationButton" destination="qtp-c1-CqV" id="S9o-yL-kNs"/>

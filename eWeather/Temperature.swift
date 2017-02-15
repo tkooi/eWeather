@@ -12,7 +12,7 @@ import UIKit
 struct Temperature: Equatable {
 
 
-    // MARK: Internal
+    // MARK: - Internal
 
     enum Unit {
         case kelvin, celcius, fahrenheit
@@ -62,7 +62,7 @@ struct Temperature: Equatable {
     }
     
     
-    // MARK: Equatable
+    // MARK: - Equatable
     
     static func == (lhs: Temperature, rhs: Temperature) -> Bool {
         return lhs.value == rhs.value && lhs.unit == rhs.unit

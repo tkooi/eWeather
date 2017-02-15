@@ -11,6 +11,10 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+
+enum WeatherServiceError : Error { case weatherNotFound }
+
+
 class WeatherService {
 
 
@@ -79,8 +83,4 @@ class WeatherService {
 
     private static let openWeatherEndPoint = "http://api.openweathermap.org/data/2.5/weather"
     private static let openWeatherAPIKey = "95d190a434083879a6398aafd54d9e73"
-}
-
-enum WeatherServiceError : Error {
-    case weatherNotFound
 }

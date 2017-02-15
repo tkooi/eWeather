@@ -27,8 +27,6 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
 
     @IBOutlet weak var unitSegmentedControl: UISegmentedControl!
 
-    @IBOutlet var backgroundView: UIView!
-
     var weather: Weather? {
 
         didSet { updateWeather() }
@@ -89,9 +87,9 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
 
     func resetWeather() {
 
-        searchTextField.text = nil
-        temparatureLabel.text = nil
-        conditionsLabel.text = nil
+        searchTextField.text = ""
+        temparatureLabel.text = ""
+        conditionsLabel.text = ""
 
         updateClearButton()
     }

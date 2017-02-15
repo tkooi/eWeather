@@ -12,13 +12,14 @@
 		659057431E4FE2CE00448308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659057411E4FE2CE00448308 /* Main.storyboard */; };
 		659057451E4FE2CE00448308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659057441E4FE2CE00448308 /* Assets.xcassets */; };
 		659057481E4FE2CE00448308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659057461E4FE2CE00448308 /* LaunchScreen.storyboard */; };
-		659057531E4FE2CE00448308 /* eweatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057521E4FE2CE00448308 /* eweatherTests.swift */; };
+		659057531E4FE2CE00448308 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057521E4FE2CE00448308 /* ViewControllerTests.swift */; };
 		6590576C1E4FE8D500448308 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 6590576B1E4FE8D500448308 /* Cartfile */; };
 		6590576F1E4FF14300448308 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6590576E1E4FF14300448308 /* SwiftyJSON.framework */; };
 		659057711E4FF14F00448308 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659057701E4FF14F00448308 /* Alamofire.framework */; };
 		659057741E4FF5F700448308 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057731E4FF5F700448308 /* WeatherService.swift */; };
 		659057761E50228000448308 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659057751E50228000448308 /* Weather.swift */; };
 		659057781E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 659057771E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework */; };
+		65ABFBE01E54675F00AAE634 /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65ABFBDF1E54675F00AAE634 /* TemperatureTests.swift */; };
 		65E373DA1E52DFB7001AE783 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E373D91E52DFB7001AE783 /* Colors.swift */; };
 		65F1F4401E5193DE00FD0844 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F1F43F1E5193DE00FD0844 /* Temperature.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +43,7 @@
 		659057471E4FE2CE00448308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		659057491E4FE2CE00448308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6590574E1E4FE2CE00448308 /* eWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		659057521E4FE2CE00448308 /* eweatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eweatherTests.swift; sourceTree = "<group>"; };
+		659057521E4FE2CE00448308 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		659057541E4FE2CE00448308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6590576B1E4FE8D500448308 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		6590576E1E4FF14300448308 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
@@ -50,6 +51,7 @@
 		659057731E4FF5F700448308 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		659057751E50228000448308 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		659057771E50F78B00448308 /* AlamofireNetworkActivityIndicator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireNetworkActivityIndicator.framework; path = Carthage/Build/iOS/AlamofireNetworkActivityIndicator.framework; sourceTree = "<group>"; };
+		65ABFBDF1E54675F00AAE634 /* TemperatureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
 		65E373D91E52DFB7001AE783 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		65F1F43F1E5193DE00FD0844 /* Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,8 +117,9 @@
 		659057511E4FE2CE00448308 /* eWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
-				659057521E4FE2CE00448308 /* eweatherTests.swift */,
+				659057521E4FE2CE00448308 /* ViewControllerTests.swift */,
 				659057541E4FE2CE00448308 /* Info.plist */,
+				65ABFBDF1E54675F00AAE634 /* TemperatureTests.swift */,
 			);
 			path = eWeatherTests;
 			sourceTree = "<group>";
@@ -270,7 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659057531E4FE2CE00448308 /* eweatherTests.swift in Sources */,
+				65ABFBE01E54675F00AAE634 /* TemperatureTests.swift in Sources */,
+				659057531E4FE2CE00448308 /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +444,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thomaskooi.eWeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eWeather.temp_caseinsensitive_rename.app/eWeather.temp_caseinsensitive_rename";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eWeather.app/eWeather";
 			};
 			name = Debug;
 		};
@@ -455,7 +459,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.thomaskooi.eWeatherTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eWeather.temp_caseinsensitive_rename.app/eWeather.temp_caseinsensitive_rename";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/eWeather.app/eWeather";
 			};
 			name = Release;
 		};
