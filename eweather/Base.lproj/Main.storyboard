@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="eweather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="eweather" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -68,7 +68,7 @@
                                 </constraints>
                                 <state key="normal" image="CurrentLocationIcon"/>
                                 <connections>
-                                    <action selector="searchByCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dM2-bv-1TX"/>
+                                    <action selector="searchByCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWZ-y2-IjE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjN-da-3vH">

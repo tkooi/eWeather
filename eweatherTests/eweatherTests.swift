@@ -9,6 +9,7 @@
 import XCTest
 @testable import eweather
 
+// TODO: Refactor Tests
 class eweatherTests: XCTestCase {
     var vc: ViewController!
     
@@ -17,7 +18,7 @@ class eweatherTests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        vc = storyboard.instantiateViewController(withIdentifier: "SearchViewController") as! ViewController
+        vc = storyboard.instantiateInitialViewController() as! ViewController
     }
     
     override func tearDown() {
@@ -25,7 +26,7 @@ class eweatherTests: XCTestCase {
         super.tearDown()
     }
     
-    func testLabelsShowCorrectValues() {
+    func testLabelsShowCorrectText() {
         // Initialize the view
         let _ = vc.view
         

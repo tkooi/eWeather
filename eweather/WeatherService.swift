@@ -11,67 +11,76 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-
 class WeatherService {
 
-    // MARK: Internal
 
-    static func searchByCoordinate(latitude: Double, longitude: Double, completion: @escaping (Result<Weather>) -> ()) {
+    // MARK: - Internal
+
+    static func searchByCoordinate(latitude: Double, longitude: Double, success: @escaping (Weather) -> (), failure: @escaping (Error) -> ()) {
         let parameters = [
             "APPID": openWeatherAPIKey,
             "lat": String(latitude),
             "lon": String(longitude)
         ]
-        
-        requestWeather(parameters: parameters, completion: completion)
+
+        requestWeather(parameters: parameters, success: success, failure: failure)
     }
 
-    static func searchByQuery(_ query: String, completion: @escaping (Result<Weather>) -> ()) {
+    static func searchByQuery(_ query: String, success: @escaping (Weather) -> (), failure: @escaping (Error) -> ()) {
         let parameters = [
             "APPID": openWeatherAPIKey,
             "q": query
         ]
 
-        requestWeather(parameters: parameters, completion: completion)
+        requestWeather(parameters: parameters, success: success, failure: failure)
     }
 
-    static func searchByZipCode(_ zipCode: Int, completion: @escaping (Result<Weather>) -> ()) {
+    static func searchByZipCode(_ zipCode: Int, success: @escaping (Weather) -> (), failure: @escaping (Error) -> ()) {
         let parameters = [
             "APPID": openWeatherAPIKey,
             "zip": String(zipCode)
         ]
 
-        requestWeather(parameters: parameters, completion: completion)
+        requestWeather(parameters: parameters, success: success, failure: failure)
     }
 
 
-    // MARK: Private
+    // MARK: - Private
 
-    private static func requestWeather(parameters: [String: String], completion: @escaping (Result<Weather>) -> ()) {
+    private static func requestWeather(parameters: [String: String], success: @escaping (Weather) -> (), failure: @escaping (Error) -> ()) {
 
         Alamofire.request(openWeatherEndPoint, parameters: parameters)
             .validate()
-            .responseJSON { response in handleResult(response.result, completion: completion) }
-    }
-    
-    private static func handleResult(_ result: Result<Any>, completion: @escaping (Result<Weather>) -> ()) {
-        switch result {
+            .responseJSON { response in
 
-        case .success(let value):
-            let json = JSON(value);
+                switch response.result {
 
-            if let city = json["name"].string, let temperature = json["main"]["temp"].double, let conditions = json["weather"][0]["description"].string {
+                case .success(let value):
+                    let json = JSON(value)
 
-                let weather = Weather(city: city, temperature: Temperature(temperature), conditions: conditions)
+                    guard let city = json["name"].string,
+                        let temperature = json["main"]["temp"].double,
+                        let conditions = json["weather"][0]["description"].string
+                    else { return }
 
-                completion(.success(weather))
-            }
+                    let weather = Weather(city: city, temperature: Temperature(temperature), conditions: conditions)
 
-        case .failure(let error):
-            completion(.failure(error))
+                    success(weather)
+
+                case .failure(let error):
+                    switch error {
+
+                    case Alamofire.AFError.responseValidationFailed: failure(WeatherServiceError.weatherNotFound)
+                    default: failure(error)
+                    }
+                }
         }
     }
 
     private static let openWeatherEndPoint = "http://api.openweathermap.org/data/2.5/weather"
     private static let openWeatherAPIKey = "95d190a434083879a6398aafd54d9e73"
+}
+
+enum WeatherServiceError : Error {
+    case weatherNotFound
 }

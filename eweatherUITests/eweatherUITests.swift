@@ -8,6 +8,7 @@
 
 import XCTest
 
+// TODO: Add UITests
 class eweatherUITests: XCTestCase {
         
     override func setUp() {
