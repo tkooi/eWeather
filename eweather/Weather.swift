@@ -1,6 +1,6 @@
 //
 //  Weather.swift
-//  eweather
+//  eWeather
 //
 //  Created by Thomas Kooi on 2/11/17.
 //  Copyright © 2017 Thomas Kooi. All rights reserved.

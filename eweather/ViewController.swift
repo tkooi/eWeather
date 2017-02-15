@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  eweather
+//  eWeather
 //
 //  Created by Thomas Kooi on 2/11/17.
 //  Copyright © 2017 Thomas Kooi. All rights reserved.
@@ -54,10 +54,12 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
     }
 
     func setWeather(weather: Weather) {
+
         self.weather = weather
     }
 
     func updateWeather() {
+
         guard let city = weather?.city, let temperature = weather?.temperature, let description = weather?.conditions else {
 
             resetWeather()
@@ -125,6 +127,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
     }
 
     func updateTemperature(_ temperature: Temperature) {
+
         let convertedTemperature = (self.unitSegmentedControl.selectedSegmentIndex == 0)
             ? temperature.fahrenheit()
             : temperature.celcius()

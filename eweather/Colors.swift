@@ -1,6 +1,6 @@
 //
 //  Colors.swift
-//  eweather
+//  eWeather
 //
 //  Created by Thomas Kooi on 2/13/17.
 //  Copyright © 2017 Thomas Kooi. All rights reserved.

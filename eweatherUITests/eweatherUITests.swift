@@ -1,6 +1,6 @@
 //
-//  eweatherUITests.swift
-//  eweatherUITests
+//  eWeatherUITests.swift
+//  eWeatherUITests
 //
 //  Created by Thomas Kooi on 2/11/17.
 //  Copyright © 2017 Thomas Kooi. All rights reserved.
@@ -9,7 +9,7 @@
 import XCTest
 
 // TODO: Add UITests
-class eweatherUITests: XCTestCase {
+class eWeatherUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

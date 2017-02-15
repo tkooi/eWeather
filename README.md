@@ -1,2 +1,2 @@
-# eweather
+# eWeather
 A Simple Weather App

@@ -1,16 +1,16 @@
 //
-//  eweatherTests.swift
-//  eweatherTests
+//  eWeatherTests.swift
+//  eWeatherTests
 //
 //  Created by Thomas Kooi on 2/11/17.
 //  Copyright © 2017 Thomas Kooi. All rights reserved.
 //
 
 import XCTest
-@testable import eweather
+@testable import eWeather
 
 // TODO: Refactor Tests
-class eweatherTests: XCTestCase {
+class eWeatherTests: XCTestCase {
     var vc: ViewController!
     
     override func setUp() {
